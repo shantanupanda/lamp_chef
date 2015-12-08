@@ -5,7 +5,6 @@
     include_recipe 'yum'
   when 'debian'
     include_recipe 'apt'
-    end
   end
   
 #Enable default site
