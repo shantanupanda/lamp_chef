@@ -1,13 +1,9 @@
-#
-# Cookbook Name:: lamp-chef
-# Recipe:: apache2
-#
 #Installs Apache2 webserver and configures its default host.
 
  case node['platform_family']
   when 'rhel'
     execute "update-upgrade" do
-    command "yum update"
+    command "yum update -y"
     action :run
     end
   when 'debian'
