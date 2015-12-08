@@ -1,7 +1,3 @@
-#
-# Cookbook Name:: lamp-chef
-# Recipe:: apache2
-#
 #Installs Apache2 webserver and configures its default host.
 
  case node['platform_family']
@@ -12,8 +8,7 @@
     include_recipe 'apt'
     end
   end
-
-
+  
 #Enable default site
 node.override[:apache][:default_site_enabled] = true
 
