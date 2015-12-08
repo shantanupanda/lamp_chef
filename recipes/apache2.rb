@@ -2,18 +2,13 @@
 
  case node['platform_family']
   when 'rhel'
-    execute "update-upgrade" do
-    command "yum update -y"
-    action :run
+    include_recipe 'yum'
     end
   when 'debian'
-    execute "update-upgrade" do
-    command "apt-get update && apt-get upgrade -y"
-    action :run
+    include_recipe 'apt'
     end
   end
-
-
+  
 #Enable default site
 node.override[:apache][:default_site_enabled] = true
 
