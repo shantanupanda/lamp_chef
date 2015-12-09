@@ -13,3 +13,11 @@ node.override[:apache][:default_site_enabled] = true
 # Install apache webserver
 include_recipe 'apache2'
 
+#Create Index.html 
+
+file '/var/www/html/index.html' do
+        content '<html>Hello World</html>'
+        owner 'root'
+        group 'root'
+        mode '755'
+end
