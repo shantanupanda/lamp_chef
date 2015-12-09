@@ -18,6 +18,7 @@ default[:lamp_chef][:mysql][:port] = '3306'
 default[:lamp_chef][:mysql][:version] = '5.5'
 
 #php attributes
+default[:lamp_chef][:php][:install_method] = 'package'
 default[:lamp_chef][:php_modules] = %w(mysql gd curl)
 #<> APC memory size
 default[:lamp_chef][:apc][:memory] = '128M'

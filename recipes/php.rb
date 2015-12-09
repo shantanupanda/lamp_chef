@@ -6,12 +6,14 @@
 #Simple wrapper for opscode php cookbook.
 
 # Install php from packages
+
+node.override['php']['install_method'] = node[:lamp_chef][:php][:install_method]
+
 include_recipe 'php'
 
 #Install the php modules
 node[:lamp_chef][:php_modules].each do |mod|
   include_recipe "php::module_#{mod}"
-  not_if  { node[:lamp_chef][:php_modules].empty?}
 end
 
 # Generate apc.ini configuration
