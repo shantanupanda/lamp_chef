@@ -7,13 +7,9 @@ long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
 # This version supports only apache >= 2.4
-supports 'ubuntu', '>= 13.10'
 
-depends 'mysql_role', '~> 0.1'
-depends 'apache2', '>= 2.0.0'
-depends 'php'
-depends 'yum'
-depends 'apt'
-# Optional dependencies of php_application definition
-depends 'ssl'
 
+depends 'apt','~> 2.9.2'
+depends 'yum','~> 3.8.2'
+depends 'apache2', '~> 3.1.0'
+depends 'mysql', '~> 6.1.2'
