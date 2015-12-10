@@ -44,7 +44,7 @@ Include `lamp_chef` in your node's `run_list`:
 ```
 ## Attributes
 
-# Prefork Attributes, tune them according node memory
+# Prefork Attributes ovverride
 default[:apache][:prefork][:startservers]        = defaults to '8'
 default[:apache][:prefork][:minspareservers]     = defaults to '8'
 default[:apache][:prefork][:maxspareservers]     = defaults to '16'
@@ -52,17 +52,17 @@ default[:apache][:prefork][:serverlimit]         = defaults to '200'
 default[:apache][:prefork][:maxclients]          = defaults to '200'
 default[:apache][:prefork][:maxrequestsperchild] = defaults to '10_000'
 
-#Mysql attributes
+#MySql Attributes
 default[:lamp_chef][:mysql][:servicename] = Service name for mysql
 default[:lamp_chef][:mysql][:port] = Mysql port
 default[:lamp_chef][:mysql][:version] = Mysql version to installed
 
-#php attributes
+#PHP Attributes
 default[:lamp_chef][:php][:install_method] = Installation method for PHP 'source' or 'package'
 default[:lamp_chef][:php_modules] =Default php modules installed by php_modules recipe. Defaults to "%w(mysql gd curl)"
-#<> APC memory size
+#APC Memory Size
 default[:lamp_chef][:apc][:memory] = APC memory size. Defaults to "128M".
-#<> APC slam defense suppression
+#APC Slam defense supression
 default[:lamp_chef][:apc][:slam_defense] = APC slam defense suppression. Defaults to "false".
 
 ##Recipes
