@@ -1,0 +1,4 @@
+Please perform pre-requisite for AWS RHEL 7.1
+
+1. Disable SELinux
+2. Enable "rhui-REGION-rhel-server-optional" repo present in file "redhat-rhui.repo"
