@@ -13,7 +13,7 @@ default[:apache][:prefork][:maxclients]          = 200
 default[:apache][:prefork][:maxrequestsperchild] = 10_000
 
 #Mysql attributes
-default[:lamp_chef][:mysql][:servicename] = 'talentica'
+default[:lamp_chef][:mysql][:servicename] = 'TestMySQL'
 default[:lamp_chef][:mysql][:port] = '3306'
 default[:lamp_chef][:mysql][:version] = '5.5'
 
